@@ -1,0 +1,106 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Master</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <!-- Start Screen -->
+    <section id="start-screen" class="screen">
+        <h1>Quiz Master</h1>
+        <p>Test your knowledge and improve your skills!</p>
+
+        <input type="text" id="player-name" placeholder="Enter your name">
+        <p id="name-error" class="error"></p>
+
+        <h3>Select Category</h3>
+        <select id="category">
+            <option value="General Knowledge">General Knowledge</option>
+            <option value="Computer">Computer</option>
+            <option value="Science">Science</option>
+            <option value="Sports">Sports</option>
+        </select>
+
+        <button id="start-btn">Start Quiz</button>
+        <button id="start-leaderboard-btn" class="secondary">Leaderboard</button>
+    </section>
+
+    <!-- Quiz Screen -->
+    <section id="quiz-screen" class="screen hidden">
+        <div class="quiz-info">
+            <span id="question-number"></span>
+            <span id="timer">30</span>
+        </div>
+
+        <p id="category-name"></p>
+
+        <div class="progress">
+            <div id="progress-bar"></div>
+        </div>
+
+        <h2 id="question"></h2>
+        <div id="options-container"></div>
+
+        <button id="next-btn" disabled>Next Question</button>
+    </section>
+
+    <!-- Result Screen -->
+    <section id="result-screen" class="screen hidden">
+        <h1>Quiz Completed!</h1>
+
+        <h2 id="player-result"></h2>
+        <h2 id="final-score"></h2>
+        <h3 id="percentage"></h3>
+
+        <p id="correct-answers"></p>
+        <p id="wrong-answers"></p>
+        <p id="result-message"></p>
+
+        <button id="review-btn">Review Answers</button>
+        <button id="restart-btn">Play Again</button>
+        <button id="result-leaderboard-btn" class="secondary">Leaderboard</button>
+    </section>
+
+    <!-- Review Screen -->
+    <section id="review-screen" class="screen hidden">
+        <h1>Answer Review</h1>
+        <div id="review-container"></div>
+        <button id="review-back-btn">Back to Result</button>
+    </section>
+
+    <!-- Leaderboard Screen -->
+    <section id="leaderboard-screen" class="screen hidden">
+        <h1>Leaderboard</h1>
+
+        <div class="table-wrapper">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Rank</th>
+                        <th>Name</th>
+                        <th>Category</th>
+                        <th>Score</th>
+                        <th>Percentage</th>
+                    </tr>
+                </thead>
+                <tbody id="leaderboard-body"></tbody>
+            </table>
+        </div>
+
+        <p id="empty-leaderboard" class="hidden">No records available.</p>
+
+        <button id="back-btn">Back</button>
+        <button id="clear-leaderboard-btn" class="danger">Clear Leaderboard</button>
+    </section>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

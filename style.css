@@ -1,0 +1,190 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.container {
+    width: 100%;
+    max-width: 700px;
+}
+
+.screen {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+}
+
+.hidden {
+    display: none;
+}
+
+h1 {
+    color: #5b4bba;
+    margin-bottom: 15px;
+}
+
+h2 {
+    margin: 20px 0;
+}
+
+p {
+    margin: 12px 0;
+}
+
+input, select {
+    width: 100%;
+    padding: 13px;
+    margin: 12px 0;
+    border: 1px solid #ccc;
+    border-radius: 7px;
+    font-size: 16px;
+}
+
+button {
+    background: #5b4bba;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    margin: 8px 4px;
+    border-radius: 7px;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+button:hover {
+    opacity: 0.85;
+}
+
+button:disabled {
+    background: #999;
+    cursor: not-allowed;
+}
+
+.secondary {
+    background: #444;
+}
+
+.danger {
+    background: #dc3545;
+}
+
+.error {
+    color: red;
+}
+
+.quiz-info {
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+#timer {
+    color: red;
+}
+
+#category-name {
+    color: #5b4bba;
+    font-weight: bold;
+}
+
+.progress {
+    background: #ddd;
+    height: 10px;
+    border-radius: 10px;
+    margin: 20px 0;
+    overflow: hidden;
+}
+
+#progress-bar {
+    background: #5b4bba;
+    height: 100%;
+    width: 0%;
+    transition: width 0.3s;
+}
+
+.option {
+    background: #eee;
+    color: #222;
+    width: 100%;
+    display: block;
+    text-align: left;
+    margin: 10px 0;
+}
+
+.option:hover {
+    background: #ddd;
+}
+
+.option.correct {
+    background: #28a745;
+    color: white;
+}
+
+.option.wrong {
+    background: #dc3545;
+    color: white;
+}
+
+.review-item {
+    text-align: left;
+    padding: 15px;
+    margin: 12px 0;
+    background: #f1f1f1;
+    border-radius: 8px;
+}
+
+.correct-text {
+    color: green;
+    font-weight: bold;
+}
+
+.wrong-text {
+    color: red;
+    font-weight: bold;
+}
+
+.table-wrapper {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+th, td {
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+
+th {
+    background: #5b4bba;
+    color: white;
+}
+
+@media(max-width: 500px) {
+    .screen {
+        padding: 18px;
+    }
+
+    button {
+        width: 100%;
+        margin: 7px 0;
+    }
+}
